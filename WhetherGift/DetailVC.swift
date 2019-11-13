@@ -17,7 +17,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var currentImage: UIImageView!
     
     var currentPage = 0
-    var locationsArray = [String]()
+    var locationsArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
