@@ -111,6 +111,7 @@ extension ListVC: GMSAutocompleteViewControllerDelegate {
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         dismiss(animated: true, completion: nil)
+        
         updateTable(place: place)
     }
     
