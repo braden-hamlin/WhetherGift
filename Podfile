@@ -8,6 +8,6 @@ target 'WhetherGift' do
 
   # Pods for WhetherGift
     pod 'GooglePlaces'
-    pod 'Alamofire', '~> 4.0'
+    pod 'Alamofire', '~> 4.8.2'
     pod 'SwiftyJSON', '~> 4.0'
 end

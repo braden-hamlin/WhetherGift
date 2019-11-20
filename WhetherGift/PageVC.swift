@@ -11,7 +11,7 @@ import UIKit
 class PageVC: UIPageViewController {
     
     var currentPage = 0
-    var locationsArray = ["Local City", "Spokane, Washington", "Seattle, Washington","Redmond, Washington"]
+    var locationsArray = [WeatherLocation]()
     var pageControl: UIPageControl!
     var listButton: UIButton!
     var barButtonWidth: CGFloat = 44
@@ -22,6 +22,10 @@ class PageVC: UIPageViewController {
         
         delegate = self
         dataSource = self
+        
+        var newLocation = WeatherLocation()
+        newLocation.name = "Unknown Whether Location"
+        locationsArray.append(newLocation)
         
         setViewControllers([createDetailVC(forPage: 0)], direction: .forward, animated: false, completion: nil)
     }
@@ -35,7 +39,7 @@ class PageVC: UIPageViewController {
     //MARK:- UI Configuration Methods
     func configurePageControl() {
         let pageControlHeight: CGFloat = barButtonHeight
-        let pageControlWidth: CGFloat = view.frame.width - (barButtonWidth*2)
+        let pageControlWidth: CGFloat = view.frame.width - (barButtonWidth * 2)
         let safeHeight = view.frame.height - view.safeAreaInsets.bottom
         pageControl = UIPageControl(frame: CGRect(x: (view.frame.width - pageControlWidth)/2, y: safeHeight-pageControlHeight, width: pageControlWidth, height: pageControlHeight))
         pageControl.pageIndicatorTintColor = UIColor.lightGray
