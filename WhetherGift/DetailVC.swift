@@ -16,6 +16,8 @@ class DetailVC: UIViewController {
     @IBOutlet weak var tempertureLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var currentImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var currentPage = 0
     var locationsArray = [WeatherLocation]()
@@ -24,6 +26,8 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         if currentPage != 0 {
             self.locationsArray[currentPage].getWeather {
                 self.updateUserInterface()
@@ -45,6 +49,7 @@ class DetailVC: UIViewController {
         tempertureLabel.text = location.currentTemp
         summaryLabel.text = location.currentSummary
         currentImage.image = UIImage(named: location.currentIcon)
+        tableView.reloadData()
         
     }
     func formalTimeForTimeZone(unixDate: TimeInterval, timeZone: String) -> String {
@@ -109,3 +114,25 @@ extension DetailVC: CLLocationManagerDelegate {
         print("Failed to get user location")
     }
 }
+
+extension DetailVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locationsArray[currentPage].dailyForecastArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DayWeatherCell", for: indexPath) as! DayWeatherCell
+        let dailyForecast = locationsArray[currentPage].dailyForecastArray[indexPath.row]
+        let timeZone = locationsArray[currentPage].timeZone
+        cell.update(with: dailyForecast, timeZone: timeZone)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+}
+
+
+
