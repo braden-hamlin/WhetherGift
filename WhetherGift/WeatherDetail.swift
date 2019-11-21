@@ -1,5 +1,5 @@
 //
-//  WhetherLocation.swift
+//  WhetherDetail.swift
 //  WhetherGift
 //
 //  Created by Braden Hamlin on 11/19/19.
@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class WeatherLocation {
+class WeatherDetail: WeatherLocation {
     
     struct HourlyForecast{
         var hourlyTime: Double
@@ -27,8 +27,6 @@ class WeatherLocation {
         var dailyIcon: String
     }
     
-    var name = ""
-    var coordinates = ""
     var currentTemp = "--"
     var currentSummary = ""
     var currentIcon = ""
