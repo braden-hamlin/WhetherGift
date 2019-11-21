@@ -127,7 +127,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="h3q-QS-RWV">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="h3q-QS-RWV" customClass="HourlyWeatherCell" customModule="WhetherGift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -165,6 +165,13 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="hourlyIcon" destination="fkm-1r-rka" id="sGd-3B-Qgd"/>
+                                            <outlet property="hourlyPrecipProb" destination="j3u-JH-obU" id="bKe-BZ-ubi"/>
+                                            <outlet property="hourlyTemp" destination="r0U-r6-pyV" id="kdI-77-9lt"/>
+                                            <outlet property="hourlyTime" destination="4NF-bd-8aL" id="Dro-Mx-oS3"/>
+                                            <outlet property="rainDropImage" destination="Kae-ZJ-SgR" id="qjf-or-ENb"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
