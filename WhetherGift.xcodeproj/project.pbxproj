@@ -14,6 +14,7 @@
 		F21E61D92385F5DE00D5FF20 /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E61D82385F5DE00D5FF20 /* TimeInterval+format.swift */; };
 		F21E61DB23861E4000D5FF20 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E61DA23861E4000D5FF20 /* HourlyWeatherCell.swift */; };
 		F21E61DD2386445900D5FF20 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E61DC2386445900D5FF20 /* WeatherLocation.swift */; };
+		F21E61E12387299500D5FF20 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E61E02387299500D5FF20 /* AboutVC.swift */; };
 		F22C57F62384C13E002F8F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22C57F42384C13E002F8F75 /* Main.storyboard */; };
 		F2ECD0EC2373743A00A1AC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ECD0EB2373743A00A1AC6E /* AppDelegate.swift */; };
 		F2ECD0F32373744200A1AC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2ECD0F22373744200A1AC6E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		F21E61D82385F5DE00D5FF20 /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
 		F21E61DA23861E4000D5FF20 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
 		F21E61DC2386445900D5FF20 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
+		F21E61E02387299500D5FF20 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		F22C57F52384C13E002F8F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WhetherGift/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2ECD0E82373743A00A1AC6E /* WhetherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhetherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ECD0EB2373743A00A1AC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				F2ECD0EB2373743A00A1AC6E /* AppDelegate.swift */,
 				F21E61DC2386445900D5FF20 /* WeatherLocation.swift */,
 				F21E61D2238506E300D5FF20 /* WeatherDetail.swift */,
+				F21E61E02387299500D5FF20 /* AboutVC.swift */,
 				F2ECD10123737B8300A1AC6E /* PageVC.swift */,
 				F2ECD0FF237378E000A1AC6E /* ListVC.swift */,
 				F2ECD0FD2373754400A1AC6E /* DetailVC.swift */,
@@ -254,6 +257,7 @@
 				F21E61D92385F5DE00D5FF20 /* TimeInterval+format.swift in Sources */,
 				F2ECD0EC2373743A00A1AC6E /* AppDelegate.swift in Sources */,
 				F2ECD0FE2373754400A1AC6E /* DetailVC.swift in Sources */,
+				F21E61E12387299500D5FF20 /* AboutVC.swift in Sources */,
 				F21E61D523851BA200D5FF20 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
